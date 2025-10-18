@@ -40,7 +40,7 @@ README.md          # Este arquivo
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/lu-cabral/frontendweb1.git
+   git clone https://github.com/lu-cabral/frontendweb.git
    ```
 
 2. Abra o arquivo `index.html` em qualquer navegador web
