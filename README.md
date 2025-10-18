@@ -1,41 +1,23 @@
-# 🌐 Desenvolvimento Front-End para Web
+# Desenvolvimento Front-End para Web
 
 Repositório contendo todas as entregas da disciplina **Desenvolvimento Front-End para Web**.
 
-## 📚 Estrutura do Repositório
+## Estrutura do Repositório
 
-### 📁 Entregas
+### Entregas
 
 | Entrega | Descrição | Status | Link |
 |---------|-----------|--------|------|
-| [Entrega 1](./entrega-1/) | Site Institucional - ONG Florescer | ✅ Concluída | [Ver projeto](./entrega-1/) |
-| Entrega 2 | *Em desenvolvimento* | 🔄 Pendente | - |
-| Entrega 3 | *Em desenvolvimento* | 🔄 Pendente | - |
-| Entrega 4 | *Em desenvolvimento* | 🔄 Pendente | - |
+| [Entrega 1](./entrega-1/) | HTML | Concluída | [Ver projeto](./entrega-1/) |
+| Entrega 2 | *Em desenvolvimento* | Pendente | - |
+| Entrega 3 | *Em desenvolvimento* | Pendente | - |
+| Entrega 4 | *Em desenvolvimento* | Pendente | - |
 
-## 🎯 Objetivos da Disciplina
+## Objetivos das Entregas
 
-- Desenvolvimento de páginas web com HTML5 semântico
-- Estilização com CSS3 e layouts responsivos
-- Criação de formulários e validações
-- Boas práticas de acessibilidade e usabilidade
-- Controle de versão com Git e GitHub
+Desenvolver um sistema web completo que oferece às ONGs uma presença digital profissional e funcional. O sistema deve contemplar diferentes tipos de usuários e funcionalidades específicas para cada perfil.
 
-## 🛠️ Tecnologias Utilizadas
-
-- **HTML5** - Estruturação semântica
-- **CSS3** - Estilização e layouts
-- **JavaScript** - Interatividade (entregas futuras)
-- **Git & GitHub** - Controle de versão
-
-## 📊 Progresso Geral
-
-- ✅ **25%** - Entrega 1 concluída
-- 🔄 **0%** - Entrega 2 em andamento  
-- 🔄 **0%** - Entrega 3 em andamento
-- 🔄 **0%** - Entrega 4 em andamento
-
-## 👩‍💻 Desenvolvido por
+## Desenvolvido por
 
 **Luana Cabral**  
 Estudante de Desenvolvimento Front-End para Web
