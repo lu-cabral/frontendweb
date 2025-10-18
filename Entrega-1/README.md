@@ -14,16 +14,15 @@ Este projeto foi desenvolvido como parte da disciplina de **Desenvolvimento Fron
 ## Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica das páginas
-- **CSS3**: Estilização e layout responsivo
 - **Formulários HTML**: Com validação nativa do navegador
 
 ## Características do Site
 
-- ✅ **HTML Semântico**: Uso correto de tags como `<header>`, `<main>`, `<section>`, `<nav>`
-- ✅ **Acessibilidade**: Labels associados aos campos, atributos `alt` em imagens
-- ✅ **Validação W3C**: Código validado pelo W3C Markup Validator
-- ✅ **Formulário Funcional**: Com validações de campo e padrões de entrada
-- ✅ **Navegação Intuitiva**: Menu de navegação consistente entre páginas
+- **HTML Semântico**: Uso correto de tags como `<header>`, `<main>`, `<section>`, `<nav>`
+- **Acessibilidade**: Labels associados aos campos, atributos `alt` em imagens
+- **Validação W3C**: Código validado pelo W3C Markup Validator
+- **Formulário Funcional**: Com validações de campo e padrões de entrada
+- **Navegação Intuitiva**: Menu de navegação consistente entre páginas
 
 ## Estrutura dos Arquivos
 
@@ -56,7 +55,7 @@ Este projeto demonstra conhecimentos em:
 - Boas práticas de acessibilidade
 - Organização de código e arquivos
 
-## �‍💻 Desenvolvido por
+## Desenvolvido por
 
 **Luana Cabral** - Estudante de Desenvolvimento Front-End para Web
 
