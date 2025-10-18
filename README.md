@@ -24,6 +24,6 @@ Estudante de Desenvolvimento Front-End para Web
 
 ---
 
-📅 **Período:** 2025  
-🎓 **Instituição:** [Nome da Faculdade]  
-📋 **Disciplina:** Desenvolvimento Front-End para Web
+**Período:** 2025  
+**Instituição:** Cruzeiro do Sul Virtual
+**Disciplina:** Desenvolvimento Front-End para Web
