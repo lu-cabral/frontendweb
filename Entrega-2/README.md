@@ -36,7 +36,7 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 --color-neutral-*: #ffffff até #212529; /* Escalas neutras */
 ```
 
-## Layout Responsivo
+### Layout Responsivo
 
 ### Breakpoints Implementados
 - **sm**: 640px - Mobile pequeno
@@ -50,6 +50,14 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 - **Flexbox** para componentes internos e alinhamentos
 - **Grid customizado** de 12 colunas
 - **Navegação responsiva** com dropdown hover
+
+### 📱 Navegação Mobile
+- **Menu Hambúrguer** implementado com **CSS puro** (sem JavaScript)
+- **Técnica checkbox** + `:checked` para controle de estado
+- **Animação suave** dos tracinhos (transformam em "X")
+- **Menu deslizante** aparece sob o header quando ativado
+- **Design responsivo** com cores contrastantes (#2d5a27 - verde escuro)
+- **Viewport otimizado** para prevenir zoom forçado no mobile
 
 ## Componentes Implementados
 
@@ -88,8 +96,9 @@ idoso.jpg          # Imagem ilustrativa
 1. Abra qualquer arquivo HTML em um navegador moderno
 2. Para melhor experiência, use um servidor local
 3. Teste a responsividade redimensionando a janela
-4. Experimente o formulário e validações HTML5
-5. Teste a navegação hover nos dropdowns
+4. **Teste o menu hambúrguer**: Use F12 > modo dispositivo ou redimensione para mobile
+5. Experimente o formulário e validações HTML5
+6. Teste a navegação hover nos dropdowns (desktop)
 
 ## Características Técnicas
 
@@ -105,6 +114,9 @@ idoso.jpg          # Imagem ilustrativa
 - **Animações CSS** performáticas
 - **Media queries** para responsividade total
 - **Pseudo-classes** para interatividade
+- **Menu hambúrguer CSS-only** com seletor `:checked`
+- **Transformações CSS** para animações dos ícones
+- **Posicionamento absoluto** para overlay de navegação
 
 ### Validações de Formulário
 - **CPF**: Pattern específico brasileiro
