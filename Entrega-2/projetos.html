@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>ONG Florescer - Projetos Sociais</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css?v=final">
+    </head>
+    <body class="layout">
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div class="logo">
+                        <div class="logo-circle">
+                            <img src="logo.png" alt="Logo ONG Florescer">
+                        </div>
+                        <span>ONG Florescer</span>
+                    </div>
+                    
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="projetos.html" class="nav-link dropdown-toggle">Projetos</a>
+                                <div class="dropdown-menu">
+                                    <a href="projetos.html" class="dropdown-item">Voluntariado</a>
+                                    <a href="projetos.html#doacoes" class="dropdown-item">Doações</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="cadastro.html" class="nav-link">Cadastro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contato" class="nav-link">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <h1 class="hero-title">Nossos Projetos Sociais</h1>
+                    <p class="hero-subtitle">Conheça as diferentes formas de participar e fazer a diferença na vida de nossos idosos</p>
+                    <div class="flex justify-center gap-4 mt-4">
+                        <a href="#voluntariado" class="btn btn-secondary btn-lg">Seja Voluntário</a>
+                        <a href="#doacoes" class="btn btn-outline btn-lg">Fazer Doação</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Voluntariado -->
+            <section id="voluntariado" class="section">
+                <div class="container">
+                    <h2 class="section-title">Voluntariado</h2>
+                    
+                    <div class="mb-8">
+                        <p class="card-text text-center" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-3);">Ser voluntário na ONG Florescer é uma oportunidade de espalhar alegria e carinho para idosos em casas de repouso. Para participar, basta ter vontade de ajudar e disponibilidade para dedicar algumas horas do seu tempo.</p>
+                        
+                        <p class="card-text text-center" style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-6);">Os voluntários colaboram na montagem de arranjos de flores, escrevem mensagens especiais e realizam visitas, levando sorrisos e atenção aos idosos, principalmente em datas comemorativas.</p>
+                    </div>
+
+                    <!-- Passo a passo -->
+                    <div class="grid grid-cols-3 gap-6" style="margin-bottom: var(--spacing-9);">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="card-title">1. Cadastro</h4>
+                                <p class="card-text">Preencha o formulário com suas informações pessoais e disponibilidade.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="card-title">2. Orientação</h4>
+                                <p class="card-text">Participe de uma reunião de orientação para conhecer nosso trabalho.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h4 class="card-title">3. Ação</h4>
+                                <p class="card-text">Comece a fazer a diferença na vida dos idosos com nossa equipe!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botão de ação -->
+                    <div class="text-center">
+                        <a href="cadastro.html" class="btn btn-primary btn-lg">Venha florescer com a gente!</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Doações -->
+            <section id="doacoes" class="section" style="background-color: var(--color-neutral-200);">
+                <div class="container">
+                    <h2 class="section-title">Doações</h2>
+                    <div class="grid grid-cols-2 gap-6" style="align-items: stretch; margin-bottom: var(--spacing-10);">
+                        <div style="display: flex;">
+                            <div class="card card-full-height" style="display: flex; flex-direction: column; width: 100%; min-height: 100%;">
+                                <img src="idoso.jpg" alt="Idoso recebendo flores" class="card-image" style="height: 200px; object-fit: cover; flex-shrink: 0;">
+                                <div class="card-body" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <h3 class="card-title">Transformando Vidas</h3>
+                                        <p class="card-text">Cada doação representa um sorriso, um momento especial e uma lembrança carinhosa para nossos idosos.</p>
+                                    </div>
+                                    <div class="flex gap-2 mt-3">
+                                        <span class="tag">Alegria</span>
+                                        <span class="tag">Carinho</span>
+                                        <span class="tag">Esperança</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex;">
+                            <div class="card project-card card-full-height" style="display: flex; flex-direction: column; width: 100%; min-height: 100%;">
+                                <div class="card-header" style="flex-shrink: 0;">
+                                    <div class="flex items-center gap-3">
+                                        <span style="font-size: 2rem; color: var(--color-accent);">❤️</span>
+                                        <h3 class="card-title">Como Doar</h3>
+                                    </div>
+                                </div>
+                                <div class="card-body" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <p class="card-text">Doar para a ONG Florescer é uma forma simples e significativa de contribuir para o bem-estar de idosos em casas de repouso. Sua doação pode ser feita em dinheiro, flores, materiais para arranjos ou até mesmo cartões com mensagens de carinho.</p>
+                                        
+                                        <p class="card-text">Cada contribuição ajuda a levar alegria e conforto para quem mais precisa, especialmente em datas especiais.</p>
+                                    </div>
+                                    
+                                    <div class="alert alert-info">
+                                        <strong>Transparência:</strong> Toda doação é recebida com gratidão e você pode acompanhar como ela faz a diferença na vida dos idosos atendidos.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tipos de Doação -->
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="card text-center">
+                            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                                <div>
+                                    <h4 class="card-title">Dinheiro</h4>
+                                    <p class="card-text">Contribuições financeiras para compra de materiais e manutenção dos projetos.</p>
+                                </div>
+                                <a href="#contato" class="btn btn-success btn-sm mt-3">Entre em contato</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card text-center">
+                            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                                <div>
+                                    <h4 class="card-title">Flores</h4>
+                                    <p class="card-text">Doação de flores frescas para a montagem dos arranjos especiais.</p>
+                                </div>
+                                <a href="#contato" class="btn btn-success btn-sm mt-3">Entre em contato</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card text-center">
+                            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                                <div>
+                                    <h4 class="card-title">Materiais</h4>
+                                    <p class="card-text">Fitas, vasos, papel, cartolina e outros materiais para arranjos.</p>
+                                </div>
+                                <a href="#contato" class="btn btn-success btn-sm mt-3">Entre em contato</a>
+                            </div>
+                        </div>
+                        
+                        <div class="card text-center">
+                            <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                                <div>
+                                    <h4 class="card-title">Tempo</h4>
+                                    <p class="card-text">Doe seu tempo e habilidades como voluntário em nossos projetos.</p>
+                                </div>
+                                <a href="cadastro.html" class="btn btn-outline btn-sm mt-3">Voluntariar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contato -->
+            <section id="contato" class="section">
+                <div class="container">
+                    <h2 class="section-title">Entre em Contato</h2>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Informações de Contato</h3>
+                                <div style="margin-top: var(--spacing-4);">
+                                    <div style="margin-bottom: var(--spacing-4);">
+                                        <p class="font-weight-medium" style="margin-bottom: var(--spacing-1);">E-mail</p>
+                                        <a href="mailto:ongflorescer@ong.com" class="text-primary">ongflorescer@ong.com</a>
+                                    </div>
+                                    <div style="margin-bottom: var(--spacing-4);">
+                                        <p class="font-weight-medium" style="margin-bottom: var(--spacing-1);">Telefone</p>
+                                        <a href="tel:(11)1234-5678" class="text-primary">(11) 1234-5678</a>
+                                    </div>
+                                    <div style="margin-bottom: var(--spacing-4);">
+                                        <p class="font-weight-medium" style="margin-bottom: var(--spacing-1);">WhatsApp</p>
+                                        <a href="https://wa.me/5511999999999" class="text-primary" target="_blank">(11) 99999-9999</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Envie uma Mensagem</h3>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="nome-contato" class="form-label">Nome:</label>
+                                        <input type="text" id="nome-contato" name="nome" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email-contato" class="form-label">E-mail:</label>
+                                        <input type="email" id="email-contato" name="email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="mensagem" class="form-label">Mensagem:</label>
+                                        <textarea id="mensagem" name="mensagem" class="form-control form-textarea" rows="4" required></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                                </form>
+                                
+                                <div class="alert alert-info mt-4">
+                                    <strong>Emergências:</strong> Para situações urgentes, entre em contato via WhatsApp: (11) 99999-9999
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="grid grid-cols-3 gap-6 mb-4">
+                    <div>
+                        <h4 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-3);">ONG Florescer</h4>
+                        <p class="text-sm">Transformando vidas através do carinho e dedicação com nossos idosos.</p>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-2);">Links Rápidos</h5>
+                        <ul style="list-style: none; margin: 0; padding: 0;">
+                            <li style="margin-bottom: var(--spacing-1);"><a href="index.html" style="color: var(--color-neutral-300);">Home</a></li>
+                            <li style="margin-bottom: var(--spacing-1);"><a href="projetos.html" style="color: var(--color-neutral-300);">Projetos</a></li>
+                            <li style="margin-bottom: var(--spacing-1);"><a href="cadastro.html" style="color: var(--color-neutral-300);">Cadastro</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-2);">Contato</h5>
+                        <p class="text-sm">ongflorescer@ong.com</p>
+                        <p class="text-sm">(11) 1234-5678</p>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--color-neutral-600); padding-top: var(--spacing-3); text-align: center;">
+                    <p>&copy; 2025 ONG Florescer. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>
