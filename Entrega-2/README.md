@@ -51,7 +51,7 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 - **Grid customizado** de 12 colunas
 - **Navegação responsiva** com dropdown hover
 
-## 🎛️ Componentes Implementados
+## Componentes Implementados
 
 ### Sistema de Botões
 - **4 Variações**: Primary, Secondary, Outline, Ghost
@@ -70,20 +70,20 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 - **Alerts** para diferentes tipos de feedback
 - **Animações CSS** suaves
 
-## 📁 Estrutura dos Arquivos
+## Estrutura dos Arquivos
 
 ```
 projeto/
-├── index.html          # Página inicial
-├── projetos.html       # Página de projetos sociais  
-├── cadastro.html       # Formulário de cadastro
-├── styles.css          # Sistema de design completo
-├── README.md           # Esta documentação
-├── logo.png           # Logo da ONG
-└── idoso.jpg          # Imagem ilustrativa
+index.html          # Página inicial
+projetos.html       # Página de projetos sociais  
+cadastro.html       # Formulário de cadastro
+styles.css          # Sistema de design completo
+README.md           # Esta documentação
+logo.png           # Logo da ONG
+idoso.jpg          # Imagem ilustrativa
 ```
 
-## 💻 Como Visualizar
+## Como Visualizar
 
 1. Abra qualquer arquivo HTML em um navegador moderno
 2. Para melhor experiência, use um servidor local
@@ -91,7 +91,7 @@ projeto/
 4. Experimente o formulário e validações HTML5
 5. Teste a navegação hover nos dropdowns
 
-## 🎯 Características Técnicas
+## Características Técnicas
 
 ### HTML5 Semântico
 - Estrutura semântica correta (`header`, `nav`, `main`, `section`, `footer`)
