@@ -36,7 +36,7 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 --color-neutral-*: #ffffff até #212529; /* Escalas neutras */
 ```
 
-## 📱 Layout Responsivo
+## Layout Responsivo
 
 ### Breakpoints Implementados
 - **sm**: 640px - Mobile pequeno
