@@ -8,8 +8,8 @@ Repositório contendo todas as entregas da disciplina **Desenvolvimento Front-En
 
 | Entrega | Descrição | Status | Link |
 |---------|-----------|--------|------|
-| [Entrega 1](./entrega-1/) | HTML | Concluída | [Ver projeto](./entrega-1/) |
-| [Entrega 2](./entrega-2/) | HTML + CSS | Concluída | [Ver projeto](./entrega-2/) |
+| [Entrega 1](./Entrega-1/) | HTML | Concluída | [Ver projeto](./entrega-1/) |
+| [Entrega 2](./Entrega-2/) | HTML + CSS | Concluída | [Ver projeto](./entrega-2/) |
 | Entrega 3 | *Em desenvolvimento* | Pendente | - |
 | Entrega 4 | *Em desenvolvimento* | Pendente | - |
 
