@@ -51,7 +51,7 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 - **Grid customizado** de 12 colunas
 - **Navegação responsiva** com dropdown hover
 
-### 📱 Navegação Mobile
+### Navegação Mobile
 - **Menu Hambúrguer** implementado com **CSS puro** (sem JavaScript)
 - **Técnica checkbox** + `:checked` para controle de estado
 - **Animação suave** dos tracinhos (transformam em "X")
@@ -82,7 +82,7 @@ Este projeto apresenta um sistema de design completo e moderno, desenvolvido com
 
 O projeto foi refatorado para uma **arquitetura CSS modular** profissional, dividindo o código em módulos especializados:
 
-### 📁 Organização dos Arquivos
+### Organização dos Arquivos
 ```
 projeto/
 ├── index.html         # Página de redirecionamento automático
@@ -108,7 +108,7 @@ projeto/
 └── README.md          # Esta documentação
 ```
 
-### ✅ Vantagens da Arquitetura Modular
+### Vantagens da Arquitetura Modular
 - **Manutenibilidade**: Cada módulo tem responsabilidade específica
 - **Reutilização**: Componentes facilmente reutilizáveis
 - **Organização**: Código estruturado e fácil de localizar
