@@ -1,0 +1,16 @@
+# <tipo>[escopo opcional]: <descrição>
+
+# feat: nova funcionalidade para o usuário
+# fix: correção de bug
+# docs: alterações na documentação
+# style: formatação, ponto e vírgula faltando, etc
+# refactor: refatoração de código existente
+# test: adicionando testes em falta, refatorando testes
+# chore: atualização de tarefas de build, configurações, etc
+
+# Corpo do commit (opcional)
+# Explique o que e por que, não como
+
+# Rodapé (opcional)
+# BREAKING CHANGE: descrição
+# Closes #123

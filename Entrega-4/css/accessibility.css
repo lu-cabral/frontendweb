@@ -1,0 +1,367 @@
+/**
+ * Estilos de Acessibilidade WCAG 2.1 Nível AA
+ * Implementa alto contraste, modo escuro e melhorias de acessibilidade
+ */
+
+/* ========================================
+   SKIP LINKS
+======================================== */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--color-primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 9999;
+    font-weight: 600;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+    outline: 3px solid var(--color-warning);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   CONTROLES DE ACESSIBILIDADE
+======================================== */
+.accessibility-controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.accessibility-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-primary);
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.accessibility-btn:hover,
+.accessibility-btn:focus {
+    background: var(--color-primary);
+    color: white;
+    transform: scale(1.1);
+    outline: 3px solid var(--color-warning);
+    outline-offset: 2px;
+}
+
+.accessibility-btn:active {
+    transform: scale(0.95);
+}
+
+/* ========================================
+   SCREEN READER ONLY
+======================================== */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ========================================
+   FOCUS INDICATORS
+======================================== */
+*:focus {
+    outline: 3px solid var(--color-warning) !important;
+    outline-offset: 2px !important;
+    border-radius: 4px;
+}
+
+/* Remover outline padrão apenas quando há foco personalizado */
+*:focus:not(:focus-visible) {
+    outline: 3px solid var(--color-warning) !important;
+}
+
+/* Melhor visibilidade para links */
+a:focus {
+    background-color: rgba(255, 193, 7, 0.2);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+/* ========================================
+   NAVEGAÇÃO ACESSÍVEL
+======================================== */
+.mobile-menu-toggle:focus {
+    outline: 3px solid var(--color-warning);
+    outline-offset: 2px;
+}
+
+.nav-link:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.dropdown-toggle[aria-expanded="true"] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-item:focus {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* ========================================
+   ALTO CONTRASTE
+======================================== */
+.high-contrast {
+    --color-primary: #000000;
+    --color-secondary: #ffffff;
+    --color-accent: #ffff00;
+    --color-success: #00ff00;
+    --color-warning: #ffff00;
+    --color-error: #ff0000;
+    --color-info: #00ffff;
+    
+    --color-neutral-50: #ffffff;
+    --color-neutral-100: #ffffff;
+    --color-neutral-200: #ffffff;
+    --color-neutral-300: #ffffff;
+    --color-neutral-400: #ffffff;
+    --color-neutral-500: #ffffff;
+    --color-neutral-600: #000000;
+    --color-neutral-700: #000000;
+    --color-neutral-800: #000000;
+    --color-neutral-900: #000000;
+    
+    --color-text-primary: #000000;
+    --color-text-secondary: #000000;
+    --color-text-muted: #000000;
+    --color-background: #ffffff;
+    --color-surface: #ffffff;
+    --color-border: #000000;
+}
+
+.high-contrast * {
+    border-color: #000000 !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.high-contrast a {
+    color: #0000ff !important;
+    text-decoration: underline !important;
+}
+
+.high-contrast a:visited {
+    color: #800080 !important;
+}
+
+.high-contrast button {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+}
+
+.high-contrast .header {
+    background: #ffffff !important;
+    border-bottom: 3px solid #000000 !important;
+}
+
+.high-contrast .footer {
+    background: #000000 !important;
+    color: #ffffff !important;
+}
+
+/* ========================================
+   MODO ESCURO
+======================================== */
+.dark-mode {
+    --color-primary: #8fbc8f;
+    --color-secondary: #daa520;
+    --color-accent: #ff6b6b;
+    --color-success: #4ade80;
+    --color-warning: #fbbf24;
+    --color-error: #ef4444;
+    --color-info: #60a5fa;
+    
+    --color-neutral-50: #1a1a1a;
+    --color-neutral-100: #262626;
+    --color-neutral-200: #404040;
+    --color-neutral-300: #525252;
+    --color-neutral-400: #737373;
+    --color-neutral-500: #a3a3a3;
+    --color-neutral-600: #d4d4d4;
+    --color-neutral-700: #e5e5e5;
+    --color-neutral-800: #f5f5f5;
+    --color-neutral-900: #ffffff;
+    
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #d4d4d4;
+    --color-text-muted: #a3a3a3;
+    --color-background: #1a1a1a;
+    --color-surface: #262626;
+    --color-border: #404040;
+}
+
+.dark-mode .header {
+    background: var(--color-neutral-100);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.dark-mode .footer {
+    background: var(--color-neutral-50);
+}
+
+.dark-mode .accessibility-controls {
+    background: rgba(38, 38, 38, 0.9);
+}
+
+.dark-mode .accessibility-btn {
+    background: var(--color-neutral-100);
+    color: var(--color-text-primary);
+    border-color: var(--color-border);
+}
+
+.dark-mode .accessibility-btn:hover,
+.dark-mode .accessibility-btn:focus {
+    background: var(--color-primary);
+    color: var(--color-neutral-50);
+}
+
+/* ========================================
+   TAMANHO DE FONTE RESPONSIVO
+======================================== */
+:root {
+    --base-font-size: 16px;
+}
+
+html {
+    font-size: var(--base-font-size);
+}
+
+/* Escalabilidade da fonte */
+.font-size-small { font-size: 0.875em; }
+.font-size-base { font-size: 1em; }
+.font-size-large { font-size: 1.125em; }
+.font-size-xl { font-size: 1.25em; }
+
+/* ========================================
+   MOVIMENTO REDUZIDO
+======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+
+/* ========================================
+   MELHORIAS DE CONTRASTE
+======================================== */
+/* Garantir contraste mínimo de 4.5:1 para texto normal */
+.text-low-contrast {
+    color: var(--color-neutral-600);
+}
+
+/* Contraste melhorado para links */
+a:not(.btn) {
+    color: var(--color-primary);
+    text-decoration-color: currentColor;
+    text-underline-offset: 2px;
+}
+
+a:not(.btn):hover {
+    color: var(--color-accent);
+    text-decoration-thickness: 2px;
+}
+
+/* ========================================
+   FORMULÁRIOS ACESSÍVEIS
+======================================== */
+.form-field:focus-within label {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(123, 139, 64, 0.1);
+}
+
+.error-message {
+    color: var(--color-error);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.success-message {
+    color: var(--color-success);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+/* ========================================
+   INDICADORES VISUAIS
+======================================== */
+.required::after {
+    content: ' *';
+    color: var(--color-error);
+    font-weight: bold;
+}
+
+.optional::after {
+    content: ' (opcional)';
+    color: var(--color-text-muted);
+    font-size: 0.875em;
+}
+
+/* ========================================
+   RESPONSIVIDADE DOS CONTROLES
+======================================== */
+@media (max-width: 768px) {
+    .accessibility-controls {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+        gap: 6px;
+    }
+    
+    .accessibility-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+}

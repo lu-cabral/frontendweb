@@ -1,0 +1,55 @@
+{
+  "name": "ong-florescer-entrega4",
+  "version": "1.0.0",
+  "description": "ONG Florescer - Site institucional com JavaScript avançado e acessibilidade",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run minify:css && npm run minify:js && npm run minify:html && npm run optimize:images",
+    "minify:css": "cleancss -o dist/css/main.min.css css/main.css",
+    "minify:js": "terser js/*.js --compress --mangle -o dist/js/main.min.js",
+    "minify:html": "html-minifier --remove-comments --collapse-whitespace --minify-css --minify-js --output dist/index.html index.html",
+    "optimize:images": "imagemin images/* --out-dir=dist/images --plugin=pngquant --plugin=mozjpeg",
+    "serve": "live-server dist/",
+    "dev": "live-server ./",
+    "test": "echo 'No tests specified'",
+    "lint": "eslint js/*.js",
+    "format": "prettier --write \"**/*.{js,css,html}\"",
+    "validate": "html-validate index.html",
+    "accessibility": "pa11y http://localhost:8080",
+    "lighthouse": "lighthouse http://localhost:8080 --output=json --output-path=./reports/lighthouse.json"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "terser": "^5.24.0",
+    "html-minifier": "^4.0.0",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "live-server": "^1.2.2",
+    "eslint": "^8.55.0",
+    "prettier": "^3.1.0",
+    "html-validate": "^8.7.0",
+    "pa11y": "^6.2.3",
+    "lighthouse": "^11.4.0"
+  },
+  "keywords": [
+    "ong",
+    "florescer",
+    "accessibility",
+    "wcag",
+    "spa",
+    "javascript",
+    "html5",
+    "css3"
+  ],
+  "author": "Luana Cabral",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lu-cabral/frontendweb.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lu-cabral/frontendweb/issues"
+  },
+  "homepage": "https://lu-cabral.github.io/frontendweb/"
+}
