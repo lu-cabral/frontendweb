@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no">
+        <title>ONG Florescer - Transformando vidas com carinho</title>
+        <meta name="description" content="ONG dedicada a levar alegria e carinho para idosos através de arranjos florais e visitas voluntárias. Junte-se a nós!">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css?v=modular">
+    </head>
+    <body class="layout">
+        <!-- Link para pular navegação (acessibilidade) -->
+        <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+        
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-container">
+                    <div class="logo">
+                        <div class="logo-circle">
+                            <img src="images/logo.png" alt="Logo da ONG Florescer - Flores coloridas em formato circular">
+                        </div>
+                        <span>ONG Florescer</span>
+                    </div>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegação principal">
+                        <!-- Menu hambúrguer acessível -->
+                        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox" aria-hidden="true">
+                        <label for="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Abrir menu de navegação" role="button" tabindex="0">
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </label>
+                        
+                        <ul class="nav-list" role="menubar">
+                            <li class="nav-item" role="none">
+                                <a href="#home" class="nav-link active" role="menuitem" aria-current="page">Home</a>
+                            </li>
+                            <li class="nav-item dropdown" role="none">
+                                <a href="#projetos" class="nav-link dropdown-toggle" role="menuitem" aria-haspopup="true" aria-expanded="false">Projetos</a>
+                                <div class="dropdown-menu" role="menu" aria-label="Submenu de Projetos">
+                                    <a href="#voluntariado" class="dropdown-item" role="menuitem">Voluntariado</a>
+                                    <a href="#doacoes" class="dropdown-item" role="menuitem">Doações</a>
+                                </div>
+                            </li>
+                            <li class="nav-item" role="none">
+                                <a href="#cadastro" class="nav-link" role="menuitem">Cadastro</a>
+                            </li>
+                            <li class="nav-item" role="none">
+                                <a href="#contato" class="nav-link" role="menuitem">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        
+        <main id="main-content" class="main" role="main" aria-live="polite">
+            <!-- O conteúdo será renderizado dinamicamente pelo sistema SPA -->
+        </main>
+        
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="grid grid-cols-3 gap-6 mb-4">
+                    <div>
+                        <h4 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-3);">ONG Florescer</h4>
+                        <p class="text-sm">Transformando vidas através do carinho e dedicação com nossos idosos.</p>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-2);">Links Rápidos</h5>
+                        <nav aria-label="Links do rodapé">
+                            <ul style="list-style: none; margin: 0; padding: 0;">
+                                <li style="margin-bottom: var(--spacing-1);"><a href="#home" style="color: var(--color-neutral-300);">Home</a></li>
+                                <li style="margin-bottom: var(--spacing-1);"><a href="#projetos" style="color: var(--color-neutral-300);">Projetos</a></li>
+                                <li style="margin-bottom: var(--spacing-1);"><a href="#cadastro" style="color: var(--color-neutral-300);">Cadastro</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-2);">Contato</h5>
+                        <address class="text-sm" style="font-style: normal;">
+                            <p><a href="mailto:ongflorescer@ong.com" style="color: var(--color-neutral-300);">ongflorescer@ong.com</a></p>
+                            <p><a href="tel:+5511123456789" style="color: var(--color-neutral-300);">(11) 1234-5678</a></p>
+                        </address>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--color-neutral-600); padding-top: var(--spacing-3); text-align: center;">
+                    <p>&copy; 2025 ONG Florescer. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- Controles de acessibilidade -->
+        <div class="accessibility-controls" aria-label="Controles de acessibilidade">
+            <button id="toggle-high-contrast" class="accessibility-btn" aria-label="Alternar alto contraste" title="Alternar modo de alto contraste">
+                <span aria-hidden="true">🎨</span>
+            </button>
+            <button id="toggle-dark-mode" class="accessibility-btn" aria-label="Alternar modo escuro" title="Alternar entre modo claro e escuro">
+                <span aria-hidden="true">🌙</span>
+            </button>
+            <button id="increase-font" class="accessibility-btn" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">
+                <span aria-hidden="true">A+</span>
+            </button>
+            <button id="decrease-font" class="accessibility-btn" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">
+                <span aria-hidden="true">A-</span>
+            </button>
+        </div>
+        
+    <script src="js/accessibility.js"></script>
+    <script src="js/spa.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
