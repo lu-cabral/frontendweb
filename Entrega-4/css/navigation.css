@@ -67,16 +67,17 @@
 .nav-link {
   display: block;
   padding: var(--spacing-2) var(--spacing-3);
-  color: var(--color-neutral-100);
+  color: var(--color-neutral-100) !important;
   font-weight: var(--font-weight-medium);
   border-radius: var(--radius-base);
   transition: all var(--transition-fast);
+  text-decoration: none;
 }
 
 .nav-link:hover,
 .nav-link.active {
   background-color: rgba(255, 255, 255, 0.15);
-  color: var(--color-neutral-100);
+  color: var(--color-neutral-100) !important;
   text-decoration: none;
 }
 
@@ -136,4 +137,18 @@
 .dropdown-item:hover {
   background-color: var(--color-neutral-200);
   text-decoration: none;
+}
+
+/* Garantir cores corretas para links de navegação */
+.nav-link,
+.dropdown-item {
+  text-decoration: none !important;
+}
+
+.nav-link {
+  color: var(--color-neutral-100) !important;
+}
+
+.dropdown-item {
+  color: var(--color-neutral-700) !important;
 }

@@ -1,5 +1,10 @@
 // Lógica de navegação SPA
 function navigate(page) {
+    // Se começar com #, é navegação por hash
+    if (page.startsWith('#')) {
+        page = page.substring(1); // Remove o #
+    }
+    
     // Trata hash na navegação
     let hash = '';
     if (page.includes('#')) {
@@ -7,25 +12,43 @@ function navigate(page) {
         page = page.split('#')[0];
     }
     
-    // Extrai o nome da página da URL (ex: "cadastro.html" -> "cadastro")
-    let pageName = page.replace('.html', '').replace(/.*\//, '');
-    
-    // Mapeia páginas para templates
+    // Mapeia hash/páginas para templates
     const pageMap = {
+        'home': 'home',
+        'cadastro': 'cadastro', 
+        'projetos': 'projetos',
+        'contato': 'home', // contato está na home
+        'voluntariado': 'projetos', // voluntariado está em projetos
+        'doacoes': 'projetos', // doacoes está em projetos
         'index': 'home',
-        'cadastro': 'cadastro',
-        'projetos': 'projetos'
+        '': 'home' // página vazia = home
     };
     
-    const templateName = pageMap[pageName] || 'home';
+    const templateName = pageMap[page] || 'home';
     
-    // Atualiza a URL sem recarregar (apenas se não for protocolo file://)
+    // Define qual seção deve ser focada
+    let targetSection = null;
+    if (page === 'voluntariado') {
+        targetSection = 'voluntariado';
+    } else if (page === 'doacoes') {
+        targetSection = 'doacoes';
+    } else if (page === 'contato') {
+        targetSection = 'contato';
+    } else if (hash) {
+        targetSection = hash;
+    }
+    
+    // Atualiza a URL sem recarregar
     try {
         if (window.location.protocol !== 'file:') {
-            window.history.pushState({ page: templateName, hash: hash }, '', hash ? page + '#' + hash : page);
+            const newUrl = hash ? '#' + page + '#' + hash : '#' + page;
+            window.history.pushState({ page: templateName, hash: hash }, '', newUrl);
+        } else {
+            // Para protocolo file://, atualiza apenas o hash
+            window.location.hash = page;
         }
     } catch (e) {
-        console.log('pushState não disponível:', e.message);
+        console.log('Navegação não disponível:', e.message);
     }
     
     // Renderiza o template
@@ -37,12 +60,12 @@ function navigate(page) {
             setTimeout(setupFormValidation, 100);
         }
         
-        // Se houver hash, faz scroll após renderização
-        if (hash) {
+        // Faz scroll para a seção específica após renderização
+        if (targetSection) {
             setTimeout(function() {
-                const el = document.getElementById(hash);
+                const el = document.getElementById(targetSection);
                 if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             }, 300);
         }
@@ -52,13 +75,14 @@ function navigate(page) {
 // Intercepta cliques nos links de navegação
 function setupSPANavigation() {
     document.addEventListener('click', function(e) {
-        // Intercepta links com .html ou itens do dropdown
-        const link = e.target.closest('a[href*=".html"], a.dropdown-item');
+        // Intercepta links com href começando com # ou .html, incluindo dropdown-item
+        const link = e.target.closest('a[href^="#"], a[href*=".html"], .dropdown-item, .nav-link');
         
-        if (link && !link.target && !link.href.startsWith('http')) {
+        if (link && !link.target && !link.href.startsWith('http') && !link.href.startsWith('mailto') && !link.href.startsWith('tel')) {
             e.preventDefault();
-            // Preserva o href original com hash
+            // Pega o href original
             let href = link.getAttribute('href');
+            console.log('Navegando para:', href); // Debug
             navigate(href);
         }
     });
@@ -66,34 +90,35 @@ function setupSPANavigation() {
 
 // Gerencia navegação do histórico do navegador (voltar/avançar)
 window.addEventListener('popstate', function(e) {
-    // Para protocolo file://, detecta a página pela URL atual
+    // Detecta página pelo hash atual
     let currentPage = 'home';
-    if (window.location.pathname.includes('cadastro')) currentPage = 'cadastro';
-    else if (window.location.pathname.includes('projetos')) currentPage = 'projetos';
+    const hash = window.location.hash.substring(1); // Remove #
+    
+    if (hash) {
+        currentPage = hash;
+    }
     
     if (e.state && e.state.page) {
         currentPage = e.state.page;
     }
     
-    if (typeof renderTemplate === 'function') {
-        renderTemplate(currentPage);
-        
-        // Re-inicializa validação se necessário
-        if (currentPage === 'cadastro' && typeof setupFormValidation === 'function') {
-            setTimeout(setupFormValidation, 100);
-        }
-        
-        // Se houver hash, faz scroll após renderização
-        if (e.state && e.state.hash) {
-            setTimeout(function() {
-                const el = document.getElementById(e.state.hash);
-                if (el) {
-                    el.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 300);
-        }
-    }
+    navigate(currentPage);
+});
+
+// Listener para mudanças de hash
+window.addEventListener('hashchange', function() {
+    const hash = window.location.hash.substring(1) || 'home';
+    navigate(hash);
 });
 
 window.navigate = navigate;
 window.setupSPANavigation = setupSPANavigation;
+
+// Inicialização quando DOM estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    setupSPANavigation();
+    
+    // Navega para a página inicial ou hash atual
+    const initialHash = window.location.hash.substring(1) || 'home';
+    navigate(initialHash);
+});

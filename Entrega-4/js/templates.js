@@ -564,15 +564,36 @@ function renderTemplate(page) {
 
 // Atualiza o link ativo no menu de navegação
 function updateActiveNavLink(page) {
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('.nav-link, .dropdown-item');
     navLinks.forEach(link => {
         link.classList.remove('active');
+        link.removeAttribute('aria-current');
         
         const href = link.getAttribute('href');
-        if ((page === 'home' && href === 'index.html') ||
-            (page === 'cadastro' && href === 'cadastro.html') ||
-            (page === 'projetos' && href === 'projetos.html')) {
+        // Mapeia páginas para links - links principais
+        if ((page === 'home' && href === '#home') ||
+            (page === 'cadastro' && href === '#cadastro') ||
+            (page === 'projetos' && href === '#projetos') ||
+            (page === 'contato' && href === '#contato') ||
+            (page === '#home' && href === '#home') ||
+            (page === '#cadastro' && href === '#cadastro') ||
+            (page === '#projetos' && href === '#projetos') ||
+            (page === '#contato' && href === '#contato')) {
             link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+        
+        // Links do dropdown - voluntariado e doações
+        if ((page === 'voluntariado' && href === '#voluntariado') ||
+            (page === 'doacoes' && href === '#doacoes')) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+            
+            // Também marca o link pai "Projetos" como ativo
+            const projectsLink = document.querySelector('.nav-link[href="#projetos"]');
+            if (projectsLink) {
+                projectsLink.classList.add('active');
+            }
         }
     });
 }

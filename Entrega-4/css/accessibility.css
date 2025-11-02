@@ -248,6 +248,42 @@ a:focus {
     color: var(--color-neutral-50);
 }
 
+/* Navegação no modo escuro */
+.dark-mode .nav-link {
+    color: var(--color-text-primary) !important;
+}
+
+.dark-mode .nav-link:hover,
+.dark-mode .nav-link.active {
+    color: var(--color-text-primary) !important;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .dropdown-item {
+    color: var(--color-text-secondary) !important;
+    background-color: var(--color-surface);
+}
+
+.dark-mode .dropdown-item:hover {
+    color: var(--color-text-primary) !important;
+    background-color: var(--color-neutral-200);
+}
+
+.dark-mode .dropdown-menu {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
+/* Logo no modo escuro */
+.dark-mode .logo span {
+    color: var(--color-text-primary) !important;
+}
+
+.dark-mode .logo-circle {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+}
+
 /* ========================================
    TAMANHO DE FONTE RESPONSIVO
 ======================================== */
@@ -296,14 +332,14 @@ html {
     color: var(--color-neutral-600);
 }
 
-/* Contraste melhorado para links */
-a:not(.btn) {
+/* Contraste melhorado para links (exceto navegação e botões) */
+a:not(.btn):not(.nav-link):not(.dropdown-item) {
     color: var(--color-primary);
     text-decoration-color: currentColor;
     text-underline-offset: 2px;
 }
 
-a:not(.btn):hover {
+a:not(.btn):not(.nav-link):not(.dropdown-item):hover {
     color: var(--color-accent);
     text-decoration-thickness: 2px;
 }
