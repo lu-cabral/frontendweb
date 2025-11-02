@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+        <title>ONG Florescer - Transformando vidas com carinho</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css?v=modular">
+    </head>
+    <body class="layout">
+        <header class="header">
+            <div class="container">
+                <div class="header-container">
+                    <div class="logo">
+                        <div class="logo-circle">
+                            <img src="images/logo.png" alt="Logo ONG Florescer">
+                        </div>
+                        <span>ONG Florescer</span>
+                    </div>
+                    
+                    <nav class="nav">
+                        <!-- Menu hambúrguer apenas CSS -->
+                        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox">
+                        <label for="mobile-menu-toggle" class="mobile-menu-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                        
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link active">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="projetos.html" class="nav-link dropdown-toggle">Projetos</a>
+                                <div class="dropdown-menu">
+                                    <a href="projetos.html#voluntariado" class="dropdown-item">Voluntariado</a>
+                                    <a href="projetos.html#doacoes" class="dropdown-item">Doações</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="cadastro.html" class="nav-link">Cadastro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html#contato" class="nav-link">Contato</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <!-- O conteúdo será renderizado dinamicamente pelo sistema SPA -->
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="grid grid-cols-3 gap-6 mb-4">
+                    <div>
+                        <h4 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-3);">ONG Florescer</h4>
+                        <p class="text-sm">Transformando vidas através do carinho e dedicação com nossos idosos.</p>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-2);">Links Rápidos</h5>
+                        <ul style="list-style: none; margin: 0; padding: 0;">
+                            <li style="margin-bottom: var(--spacing-1);"><a href="index.html" style="color: var(--color-neutral-300);">Home</a></li>
+                            <li style="margin-bottom: var(--spacing-1);"><a href="projetos.html" style="color: var(--color-neutral-300);">Projetos</a></li>
+                            <li style="margin-bottom: var(--spacing-1);"><a href="cadastro.html" style="color: var(--color-neutral-300);">Cadastro</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 style="color: var(--color-neutral-100); margin-bottom: var(--spacing-2);">Contato</h5>
+                        <p class="text-sm">ongflorescer@ong.com</p>
+                        <p class="text-sm">(11) 1234-5678</p>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--color-neutral-600); padding-top: var(--spacing-3); text-align: center;">
+                    <p>&copy; 2025 ONG Florescer. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+        
+    <script src="js/spa.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+    </body>
+</html>
